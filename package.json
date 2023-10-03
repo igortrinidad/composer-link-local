@@ -2,12 +2,15 @@
   "name": "link-laravel-packages",
   "type": "module",
   "version": "1.0.0",
-  "description": "Link or remove Laravel / composer packages locally",
-  "main": "index.js",
+  "description": "Link composer packages locally",
+  "main": "./bin/run-composer-link-local.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "release-it"
   },
-  "author": "Igor Trindade | Webfitters",
+  "bin": {
+    "composer-link-local": "./bin/run-composer-link-local.js"
+  },
+  "author": "igortrindade.dev",
   "license": "MIT",
   "dependencies": {
     "@inquirer/checkbox": "^1.3.12",
@@ -19,5 +22,8 @@
   },
   "engine": {
     "node": ">16x"
+  },
+  "devDependencies": {
+    "release-it": "^16.2.1"
   }
 }

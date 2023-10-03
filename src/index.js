@@ -2,8 +2,11 @@
 import { getComposerJson } from './getComposerJson.js';
 import { getComposerRequiredPackages } from './getComposerRequiredPackages.js';
 import { scanDirsForComposerPackage } from './scanDirsForComposerPackage.js';
+import { addPackageToRepositories } from './addPackageToRepositories.js';
 import checkbox from '@inquirer/checkbox';
 import { select } from '@inquirer/prompts';
+import fse from 'fs-extra'
+import path from 'path'
 
 export default async (currentDirectory) => {
 
@@ -46,7 +49,13 @@ export default async (currentDirectory) => {
         packageName.path = packagePathFound
       }
     }
+
+    const packagesToAdd = packages.filter(pkg => pkg.path)
+
+    for(const packageToAdd of packagesToAdd) {
+      addPackageToRepositories(packageToAdd.path, composerContent)
+    }
     
-    console.log(packages)
+    fse.writeFileSync(path.join(currentDirectory, 'composer.json'), JSON.stringify(composerContent, null, 2))
 
 }
