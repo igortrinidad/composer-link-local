@@ -47,6 +47,9 @@ export default async (currentDirectory) => {
       const packagePathFound = await scanDirsForComposerPackage(packageName.name, currentDirectory, 3)
       if(packagePathFound) {
         packageName.path = packagePathFound
+        console.log(chalk.blue(`Found package ${ packageName.name } at ${ packageName.path }`))
+      } else {
+        console.log(chalk.yellow(`Could not find the package ${ packageName.name } in directories near the current directory ${ currentDirectory }`))
       }
     }
 
