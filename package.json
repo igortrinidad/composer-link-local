@@ -1,7 +1,7 @@
 {
   "name": "composer-link-local",
   "type": "module",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Link composer packages locally",
   "main": "./bin/run-composer-link-local.js",
   "scripts": {
