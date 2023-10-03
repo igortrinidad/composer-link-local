@@ -7,6 +7,7 @@ import checkbox from '@inquirer/checkbox';
 import { select } from '@inquirer/prompts';
 import fse from 'fs-extra'
 import path from 'path'
+import chalk from 'chalk'
 
 export default async (currentDirectory) => {
 
