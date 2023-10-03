@@ -33,7 +33,7 @@ export default async (currentDirectory) => {
     })
 
     const choices = requiredPackages.map((pkg) => {
-      return { name: pkg, value: pkg, checked: pkg === 'webfitters/fittingroom' }
+      return { name: pkg, value: pkg }
     }).sort((a, b) => a.checked < b.checked ? 1 : -1)
 
     const packagesSelected = await checkbox({
