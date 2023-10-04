@@ -18,8 +18,23 @@
           {
             "type": "fix",
             "section": "Bug Fixes"
+          },
+          {
+            "type": "docs",
+            "section": "Documentation"
+          },
+          {
+            "type": "chore",
+            "section": "Routine changes"
+          },
+          {
+            "type": "test",
+            "section": "Automated tests"
+          },
+          {
+            "type": "wip",
+            "section": "Features and cchanges in progress"
           }
-
         ]
       }
     }
