@@ -9,8 +9,7 @@
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
       "gitRawCommitsOpts": {
-        "merges": true,
-        "mergePattern": "^Merge pull request #(\\d+) from (.*)$"
+        "merges": true
       },
       "preset": {
         "name": "conventionalcommits",
