@@ -8,6 +8,10 @@
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
+      "gitRawCommitsOpts": {
+        "merges": true,
+        "mergePattern": "^Merge pull request #(\\d+) from (.*)$"
+      },
       "preset": {
         "name": "conventionalcommits",
         "types": [
@@ -34,6 +38,10 @@
           {
             "type": "wip",
             "section": "Features and cchanges in progress"
+          },
+          {
+            "type": "merge",
+            "section": "Merge branches"
           }
         ]
       }
