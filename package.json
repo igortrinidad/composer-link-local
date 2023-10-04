@@ -24,6 +24,7 @@
     "node": ">16x"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^7.0.2",
     "release-it": "^16.2.1"
   }
 }
